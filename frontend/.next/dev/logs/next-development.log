@@ -1,0 +1,3146 @@
+[00:00:01.378] Server  LOG     ✓ Ready in 990ms
+[00:00:04.891] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.079] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:05.079] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:05.079] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771920959251}
+[00:00:16.103] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:13:24.926] Server  LOG     ✓ Compiled in 120ms
+[00:13:25.610] Browser ERROR   ./components/login-form.tsx:316:19
+Parsing ecmascript source code failed
+  314 |                   <p className="text-center text-xs text-gray-400 mt-2">
+  315 |                   
+> 316 |                 </>
+      |                   ^
+  317 |               )}
+  318 |
+  319 |               {/* ── FORGOT PASSWORD ── */}
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:13:39.776] Server  LOG     ✓ Compiled in 65ms
+[00:14:28.162] Browser ERROR   Failed to fetch schools: {}
+[00:14:28.162] Browser ERROR   Failed to fetch schools: {}
+[00:15:41.975] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:42.131] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:42.131] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:42.131] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771921896299}
+[00:15:44.347] Browser ERROR   Failed to fetch schools: {}
+[00:15:44.347] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:15:44.347] Browser ERROR   Failed to fetch schools: {}
+[00:18:21.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:21.312] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:21.312] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:18:21.312] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922055483} /_vercel/insights/view
+[00:18:26.075] Browser ERROR   Failed to fetch schools: {}
+[00:18:26.075] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:18:26.075] Browser ERROR   Failed to fetch schools: {}
+[00:20:00.804] Server  LOG     ✓ Compiled in 62ms
+[00:20:08.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:08.714] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:20:08.714] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:20:08.714] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922162881} /_vercel/insights/view
+[00:20:09.090] Browser ERROR   Failed to fetch schools: {}
+[00:20:09.090] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:20:09.090] Browser ERROR   Failed to fetch schools: {}
+[00:23:44.688] Server  LOG     ✓ Compiled in 83ms
+[00:23:45.620] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.620] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:45.621] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:47.196] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./lib/api-client.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:23:47.197] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./lib/api-client.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:23:47.590] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:47.707] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:48.612] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:48.612] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:23:48.612] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922382405}
+[00:23:49.610] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:49.610] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:23:49.610] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922382258} /_vercel/insights/view
+[00:23:49.610] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:23:55.943] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:56.181] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:56.181] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:23:56.181] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922390317} /_vercel/insights/view
+[00:23:56.181] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:23:57.469] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:57.657] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:57.657] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:23:57.657] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922391793} /_vercel/insights/view
+[00:23:57.657] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:09.631] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:09.773] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:09.773] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:24:09.773] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922403943} /_vercel/insights/view
+[00:24:13.610] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:49.939] Server  LOG     ✓ Compiled in 181ms
+[00:24:50.615] Browser ERROR   ./app/page.tsx:5:1
+Export Dashboard doesn't exist in target module
+  3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+  4 | import { LoginForm } from "@/components/login-form"
+> 5 | import { Dashboard } from "@/components/dashboard"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | function AppContent() {
+  8 |   const { user, isLoading } = useAuth()
+
+The export Dashboard was not found in module [project]/components/dashboard.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:50.615] Browser ERROR   ./app/page.tsx:5:1
+Export Dashboard doesn't exist in target module
+  3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+  4 | import { LoginForm } from "@/components/login-form"
+> 5 | import { Dashboard } from "@/components/dashboard"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | function AppContent() {
+  8 |   const { user, isLoading } = useAuth()
+
+The export Dashboard was not found in module [project]/components/dashboard.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:50.615] Browser ERROR   ./app/page.tsx:5:1
+Export Dashboard doesn't exist in target module
+  3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+  4 | import { LoginForm } from "@/components/login-form"
+> 5 | import { Dashboard } from "@/components/dashboard"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | function AppContent() {
+  8 |   const { user, isLoading } = useAuth()
+
+The export Dashboard was not found in module [project]/components/dashboard.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:50.615] Browser ERROR   ./app/page.tsx:5:1
+Export Dashboard doesn't exist in target module
+  3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+  4 | import { LoginForm } from "@/components/login-form"
+> 5 | import { Dashboard } from "@/components/dashboard"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | function AppContent() {
+  8 |   const { user, isLoading } = useAuth()
+
+The export Dashboard was not found in module [project]/components/dashboard.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:52.023] Server  LOG     ✓ Compiled in 124ms
+[00:24:57.576] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:57.856] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:57.856] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:24:57.856] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922451981} /_vercel/insights/view
+[00:24:57.856] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:25:17.084] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:17.232] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:17.232] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:17.232] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922471403} /_vercel/insights/view
+[00:25:17.582] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:31:06.509] Server  LOG     ✓ Compiled in 115ms
+[00:31:07.611] Browser ERROR   ./app/layout.tsx:5:1
+Export AuthProvider doesn't exist in target module
+  3 | import { Inter, Geist_Mono } from "next/font/google"
+  4 | import { Analytics } from "@vercel/analytics/next"
+> 5 | import { AuthProvider } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import "./globals.css"
+  7 |
+  8 | const _inter = Inter({ subsets: ["latin"] })
+
+The export AuthProvider was not found in module [project]/lib/auth-context.tsx [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export AuthProvider doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export AuthProvider was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export AuthProvider doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export AuthProvider was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export useAuth doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export useAuth doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/admin-panel.tsx:17:1
+Export useAuth doesn't exist in target module
+  15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+> 17 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 | import type { School, User } from "@/lib/types"
+  19 |
+  20 | interface AdminPanelProps {
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/admin-panel.tsx:17:1
+Export useAuth doesn't exist in target module
+  15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+> 17 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 | import type { School, User } from "@/lib/types"
+  19 |
+  20 | interface AdminPanelProps {
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard-header.tsx:4:1
+Export useAuth doesn't exist in target module
+  2 |
+  3 | import { useState } from "react"
+> 4 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Input } from "@/components/ui/input"
+  7 | import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard-header.tsx:4:1
+Export useAuth doesn't exist in target module
+  2 |
+  3 | import { useState } from "react"
+> 4 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Input } from "@/components/ui/input"
+  7 | import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard.tsx:6:1
+Export useAuth doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { schoolsAPI } from "@/lib/api-client"
+> 6 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+  9 | import { NepalMap } from "./nepal-map"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard.tsx:6:1
+Export useAuth doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { schoolsAPI } from "@/lib/api-client"
+> 6 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+  9 | import { NepalMap } from "./nepal-map"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/login-form.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import type React from "react"
+  4 | import { useState, useEffect, useRef } from "react"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { authAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/login-form.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import type React from "react"
+  4 | import { useState, useEffect, useRef } from "react"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { authAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/qr-scans-panel.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useEffect, useState } from "react"
+  4 | import { scansAPI } from "@/lib/api-client"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/qr-scans-panel.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useEffect, useState } from "react"
+  4 | import { scansAPI } from "@/lib/api-client"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-detail-modal.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState, useRef, useEffect, type KeyboardEvent } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-detail-modal.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState, useRef, useEffect, type KeyboardEvent } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-list.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-list.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/user-profile-modal.tsx:14:1
+Export useAuth doesn't exist in target module
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+  13 | import { usersAPI } from "@/lib/api-client"
+> 14 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export function UserProfileModal({
+  17 |   user,
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/user-profile-modal.tsx:14:1
+Export useAuth doesn't exist in target module
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+  13 | import { usersAPI } from "@/lib/api-client"
+> 14 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export function UserProfileModal({
+  17 |   user,
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/layout.tsx:5:1
+Export AuthProvider doesn't exist in target module
+  3 | import { Inter, Geist_Mono } from "next/font/google"
+  4 | import { Analytics } from "@vercel/analytics/next"
+> 5 | import { AuthProvider } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import "./globals.css"
+  7 |
+  8 | const _inter = Inter({ subsets: ["latin"] })
+
+The export AuthProvider was not found in module [project]/lib/auth-context.tsx [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export AuthProvider doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export AuthProvider was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export AuthProvider doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export AuthProvider was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export useAuth doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./app/page.tsx:3:1
+Export useAuth doesn't exist in target module
+  1 | "use client"
+  2 |
+> 3 | import { AuthProvider, useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { LoginForm } from "@/components/login-form"
+  5 | import { Dashboard } from "@/components/dashboard"
+  6 |
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/admin-panel.tsx:17:1
+Export useAuth doesn't exist in target module
+  15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+> 17 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 | import type { School, User } from "@/lib/types"
+  19 |
+  20 | interface AdminPanelProps {
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/admin-panel.tsx:17:1
+Export useAuth doesn't exist in target module
+  15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+> 17 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  18 | import type { School, User } from "@/lib/types"
+  19 |
+  20 | interface AdminPanelProps {
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard-header.tsx:4:1
+Export useAuth doesn't exist in target module
+  2 |
+  3 | import { useState } from "react"
+> 4 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Input } from "@/components/ui/input"
+  7 | import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard-header.tsx:4:1
+Export useAuth doesn't exist in target module
+  2 |
+  3 | import { useState } from "react"
+> 4 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Input } from "@/components/ui/input"
+  7 | import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard.tsx:6:1
+Export useAuth doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { schoolsAPI } from "@/lib/api-client"
+> 6 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+  9 | import { NepalMap } from "./nepal-map"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/dashboard.tsx:6:1
+Export useAuth doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { schoolsAPI } from "@/lib/api-client"
+> 6 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+  9 | import { NepalMap } from "./nepal-map"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/login-form.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import type React from "react"
+  4 | import { useState, useEffect, useRef } from "react"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { authAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/login-form.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import type React from "react"
+  4 | import { useState, useEffect, useRef } from "react"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { authAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/qr-scans-panel.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useEffect, useState } from "react"
+  4 | import { scansAPI } from "@/lib/api-client"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/qr-scans-panel.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useEffect, useState } from "react"
+  4 | import { scansAPI } from "@/lib/api-client"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-detail-modal.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState, useRef, useEffect, type KeyboardEvent } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-detail-modal.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState, useRef, useEffect, type KeyboardEvent } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-list.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/school-list.tsx:5:1
+Export useAuth doesn't exist in target module
+  3 | import { useState } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { useAuth } from "@/lib/auth-context"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { schoolsAPI } from "@/lib/api-client"
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/user-profile-modal.tsx:14:1
+Export useAuth doesn't exist in target module
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+  13 | import { usersAPI } from "@/lib/api-client"
+> 14 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export function UserProfileModal({
+  17 |   user,
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:07.611] Browser ERROR   ./components/user-profile-modal.tsx:14:1
+Export useAuth doesn't exist in target module
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+  13 | import { usersAPI } from "@/lib/api-client"
+> 14 | import { useAuth } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | export function UserProfileModal({
+  17 |   user,
+
+The export useAuth was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.005] Server  LOG     ✓ Compiled in 186ms
+[00:31:27.626] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/login-form.tsx:6:1
+Export authAPI doesn't exist in target module
+  4 | import { useState, useEffect, useRef } from "react"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { authAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Input } from "@/components/ui/input"
+  9 | import { Label } from "@/components/ui/label"
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/login-form.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/login-form.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./lib/auth-context.tsx:5:1
+Export authAPI doesn't exist in target module
+  3 | import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+  4 | import type { User } from "./types"
+> 5 | import { authAPI } from "./api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface AuthContextType {
+  8 |   user: User | null
+
+The export authAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Server Component:
+    ./lib/auth-context.tsx
+    ./app/layout.tsx
+
+  Client Component Browser:
+    ./lib/auth-context.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/auth-context.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/qr-scans-panel.tsx:4:1
+Export scansAPI doesn't exist in target module
+  2 |
+  3 | import { useEffect, useState } from "react"
+> 4 | import { scansAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useAuth } from "@/lib/auth-context"
+  6 | import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Button } from "@/components/ui/button"
+
+The export scansAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/qr-scans-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/qr-scans-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export schoolsAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/dashboard.tsx:5:1
+Export schoolsAPI doesn't exist in target module
+  3 | import { useState, useMemo, useEffect } from "react"
+  4 | import type { School } from "@/lib/types"
+> 5 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useAuth } from "@/lib/auth-context"
+  7 | import { DashboardHeader } from "./dashboard-header"
+  8 | import { SchoolList } from "./school-list"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-detail-modal.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+  8 | import { Button } from "@/components/ui/button"
+  9 | import { Input } from "@/components/ui/input"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-detail-modal.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-detail-modal.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/school-list.tsx:6:1
+Export schoolsAPI doesn't exist in target module
+  4 | import type { School } from "@/lib/types"
+  5 | import { useAuth } from "@/lib/auth-context"
+> 6 | import { schoolsAPI } from "@/lib/api-client"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Button } from "@/components/ui/button"
+  8 | import { Checkbox } from "@/components/ui/checkbox"
+  9 | import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+The export schoolsAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/school-list.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/school-list.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/admin-panel.tsx:15:1
+Export usersAPI doesn't exist in target module
+  13 | import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  14 | import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+> 15 | import { schoolsAPI, usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 | import { SpreadsheetImport } from "./spreadsheet-import"
+  17 | import { useAuth } from "@/lib/auth-context"
+  18 | import type { School, User } from "@/lib/types"
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/admin-panel.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/admin-panel.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:27.627] Browser ERROR   ./components/user-profile-modal.tsx:13:1
+Export usersAPI doesn't exist in target module
+  11 | import type { User } from "@/lib/types"
+  12 | import { Mail, Shield, User as UserIcon, Edit, Lock, Loader2, Eye, EyeOff } from "lucide-react"
+> 13 | import { usersAPI } from "@/lib/api-client"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | import { useAuth } from "@/lib/auth-context"
+  15 |
+  16 | export function UserProfileModal({
+
+The export usersAPI was not found in module [project]/lib/api-client.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/user-profile-modal.tsx [Client Component Browser]
+    ./components/dashboard-header.tsx [Client Component Browser]
+    ./components/dashboard.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/user-profile-modal.tsx [Client Component SSR]
+    ./components/dashboard-header.tsx [Client Component SSR]
+    ./components/dashboard.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:31:36.571] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./lib/api-client.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:31:36.571] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./lib/api-client.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:31:37.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:37.371] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:38.611] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:38.611] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:31:38.611] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922852065}
+[00:31:39.612] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:39.612] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:31:39.612] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922852072} /_vercel/insights/view
+[00:31:39.612] Browser ERROR   Failed to fetch schools: {}
+[00:31:39.612] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:31:39.612] Browser ERROR   Failed to fetch schools: {}
+[00:32:10.524] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:10.715] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:32:10.715] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:32:10.715] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922884851} /_vercel/insights/view
+[00:32:10.715] Browser ERROR   Failed to fetch schools: {}
+[00:32:10.715] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:32:10.715] Browser ERROR   Failed to fetch schools: {}
+[00:32:11.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:12.087] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:32:12.087] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:32:12.087] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771922886230} /_vercel/insights/view
+[00:32:12.087] Browser ERROR   Failed to fetch schools: {}
+[00:32:12.087] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:32:12.087] Browser ERROR   Failed to fetch schools: {}
+[00:32:18.192] Browser ERROR   Failed to fetch schools: {}
+[00:32:18.193] Browser ERROR   Failed to fetch schools: {}
+[00:35:18.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:18.718] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:35:18.718] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:35:18.718] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771923072889} /_vercel/insights/view
+[00:35:19.958] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:48:31.337] Server  LOG     ✓ Compiled in 57ms
+[00:48:38.382] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:38.534] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:48:38.534] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:48:38.534] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771923872705} /_vercel/insights/view
+[00:49:06.529] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:51:19.421] Server  LOG     ✓ Compiled in 53ms
+[00:55:44.570] Server  LOG     ✓ Compiled in 45ms
+[00:55:47.920] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:48.087] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:55:48.087] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:55:48.087] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771924302254} /_vercel/insights/view
+[00:55:50.598] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:00:15.304] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:15.453] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:00:15.453] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:00:15.453] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771924569619} /_vercel/insights/view
+[01:00:26.009] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:00:34.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:34.638] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:00:34.638] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:00:34.638] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771924588805} /_vercel/insights/view
+[01:01:11.116] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:11.255] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:01:11.256] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:01:11.256] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771924625426} /_vercel/insights/view
+[01:05:30.847] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:30.991] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:05:30.991] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:05:30.991] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:5000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:5000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1771924885159} /_vercel/insights/view
+[01:06:18.306] Browser WARN    Image with src "http://localhost:5000/Looma-2019.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
