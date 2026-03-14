@@ -1,7 +1,7 @@
 // API client for frontend to communicate with backend
 import type { School, User, AccessLog, ScanRecord } from "./types"
 
-const API_BASE = "http://localhost:8000"
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
 
 // Check if current session is a viewer (no real backend token)
 function isViewerSession(): boolean {

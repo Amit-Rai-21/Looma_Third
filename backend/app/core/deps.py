@@ -1,9 +1,11 @@
-from fastapi import HTTPException, Request, status
+from fastapi import HTTPException, Request, status, WebSocket
 
 from app.core.config import settings
 from app.schemas.user import UserOut
 from app.services.auth import get_user_from_session
+from app.core.logger import get_logger
 
+logger = get_logger(__name__)
 
 async def get_current_user(
     request: Request,
@@ -15,7 +17,7 @@ async def get_current_user(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="User not authorized."
         )
-    
+
     user = await get_user_from_session(session_token)
     if not user:
         raise HTTPException(
@@ -65,8 +67,28 @@ async def admin_only(request: Request) -> UserOut:
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Admin access required."
         )
-    
+
     return UserOut(**user.model_dump())
+
+async def admin_only_ws(ws: WebSocket):
+    session_token = ws.cookies.get(settings.SESSION_COOKIE_NAME)
+    if not session_token:
+        logger.error("Missing session token")
+        await ws.close(code=4401)
+        raise RuntimeError("Unauthenticated WebSocket")
+
+    user = await get_user_from_session(session_token)
+    if not user:
+        logger.error("Invalid session")
+        await ws.close(code=4401)
+        raise RuntimeError("Invalid session")
+
+    if user.role != "admin":
+        logger.error("User is not admin")
+        await ws.close(code=4403)
+        raise RuntimeError("Forbidden")
+
+    return user
 
 
 async def admin_and_staff(request: Request):

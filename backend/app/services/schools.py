@@ -10,7 +10,9 @@ from datetime import datetime, timezone
 from app.utils.dates import now_utc
 
 
-def parse_lat_long(lat_long_str: Optional[str]) -> tuple[Optional[float], Optional[float]]:
+def parse_lat_long(
+        lat_long_str: Optional[str]
+) -> tuple[Optional[float], Optional[float]]:
     if not lat_long_str:
         return None, None
     try:
@@ -25,17 +27,14 @@ def parse_lat_long(lat_long_str: Optional[str]) -> tuple[Optional[float], Option
 def school_to_out(school: School) -> SchoolOut:
     lat, lng = parse_lat_long(school.Lat_long)
 
-    contact = Contact(
-        email=school.Principal_Email,
-        phone=str(school.principal_number) if school.principal_number else None,
-        headmaster=school.Principal_name
-    )
+    contact = Contact(email=school.Principal_Email,
+                      phone=str(school.principal_number)
+                      if school.principal_number else None,
+                      headmaster=school.Principal_name)
 
-    looma = LoomaInfo(
-        id=school.Looma_Id,
-        serialNumber=school.Serial_Number,
-        version=school.Version
-    )
+    looma = LoomaInfo(id=school.Looma_Id,
+                      serialNumber=school.Serial_Number,
+                      version=school.Version)
 
     return SchoolOut(
         id=school.id,
@@ -46,7 +45,8 @@ def school_to_out(school: School) -> SchoolOut:
         province=school.Province or "",
         district=school.District or "",
         palika=school.Municipality or "",
-        status=SchoolStatus(school.status) if school.status in ["online", "offline", "maintenance"] else SchoolStatus.ONLINE,
+        status=SchoolStatus(school.status) if school.status
+        in ["online", "offline", "maintenance"] else SchoolStatus.ONLINE,
         lastSeen=school.lastSeen or now_utc(),
         loomaId=school.Looma_Id or "",
         loomaCount=0,
@@ -57,25 +57,59 @@ def school_to_out(school: School) -> SchoolOut:
     )
 
 
-async def list_schools(search: Optional[str] = None, province: Optional[str] = None) -> List[SchoolOut]:
+async def list_schools(search: Optional[str] = None,
+                       province: Optional[str] = None) -> List[SchoolOut]:
     schools: List[School] = []
+
+    # Build a combined query so province + search both apply simultaneously
+    query: dict = {}
+
+    if province is not None:
+        query["Province"] = province
 
     if search is not None:
         safe_search = re.escape(search)
-        schools = await School.find(
+        query["$or"] = [
             {
-                "$or": [
-                    {"Name of the School": {"$regex": safe_search, "$options": "i"}},
-                    {"District": {"$regex": safe_search, "$options": "i"}},
-                    {"Province": {"$regex": safe_search, "$options": "i"}},
-                    {"Municipality": {"$regex": safe_search, "$options": "i"}},
-                    {"Principal_name": {"$regex": safe_search, "$options": "i"}},
-                    {"Looma_Id": {"$regex": safe_search, "$options": "i"}},
-                ]
-            }
-        ).to_list()
-    elif province is not None:
-        schools = await School.find({"Province": province}).to_list()
+                "Name of the School": {
+                    "$regex": safe_search,
+                    "$options": "i"
+                }
+            },
+            {
+                "District": {
+                    "$regex": safe_search,
+                    "$options": "i"
+                }
+            },
+            {
+                "Province": {
+                    "$regex": safe_search,
+                    "$options": "i"
+                }
+            },
+            {
+                "Municipality": {
+                    "$regex": safe_search,
+                    "$options": "i"
+                }
+            },
+            {
+                "Principal_name": {
+                    "$regex": safe_search,
+                    "$options": "i"
+                }
+            },
+            {
+                "Looma_Id": {
+                    "$regex": safe_search,
+                    "$options": "i"
+                }
+            },
+        ]
+
+    if query:
+        schools = await School.find(query).to_list()
     else:
         schools = await School.find_all().to_list()
 
@@ -132,21 +166,25 @@ async def get_schoool_by_id(id: PydanticObjectId) -> SchoolOut | None:
         if school:
             return school_to_out(school)
     except Exception:
-        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, "Internal server error occurred when retrieving the school.")
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            "Internal server error occurred when retrieving the school.")
     return None
 
 
 async def delete_school_by_id(id: PydanticObjectId):
     school_to_delete = await School.get(id)
     if not school_to_delete:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"School with id {id} not found")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail=f"School with id {id} not found")
     await school_to_delete.delete()
 
 
 async def update_school_status(id: PydanticObjectId, status_str: SchoolStatus):
     school_to_update = await School.get(id)
     if not school_to_update:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"School with id {id} not found")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail=f"School with id {id} not found")
 
     school_to_update.status = status_str.value
     school_to_update.updatedAt = now_utc()
@@ -157,7 +195,8 @@ async def update_school_status(id: PydanticObjectId, status_str: SchoolStatus):
 async def update_school(id: PydanticObjectId, data: SchoolUpdate) -> SchoolOut:
     school_to_update = await School.get(id)
     if not school_to_update:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"School with id {id} not found")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail=f"School with id {id} not found")
 
     update_data = data.model_dump(exclude_unset=True)
 
@@ -172,8 +211,14 @@ async def update_school(id: PydanticObjectId, data: SchoolUpdate) -> SchoolOut:
     if "loomaId" in update_data:
         school_to_update.Looma_Id = update_data["loomaId"]
     if "latitude" in update_data or "longitude" in update_data:
-        lat = update_data.get("latitude", school_to_update.Lat_long.split(",")[0] if school_to_update.Lat_long else None)
-        lng = update_data.get("longitude", school_to_update.Lat_long.split(",")[1] if school_to_update.Lat_long else None)
+        lat = update_data.get(
+            "latitude",
+            school_to_update.Lat_long.split(",")[0]
+            if school_to_update.Lat_long else None)
+        lng = update_data.get(
+            "longitude",
+            school_to_update.Lat_long.split(",")[1]
+            if school_to_update.Lat_long else None)
         if lat and lng:
             school_to_update.Lat_long = f"{lat}, {lng}"
     if "contact" in update_data and update_data["contact"]:
@@ -191,7 +236,8 @@ async def update_school(id: PydanticObjectId, data: SchoolUpdate) -> SchoolOut:
         if "version" in looma:
             school_to_update.Version = looma["version"]
     if "status" in update_data:
-        school_to_update.status = update_data["status"].value if hasattr(update_data["status"], "value") else update_data["status"]
+        school_to_update.status = update_data["status"].value if hasattr(
+            update_data["status"], "value") else update_data["status"]
     if "image" in update_data:
         school_to_update.image = update_data["image"]
 
@@ -199,3 +245,10 @@ async def update_school(id: PydanticObjectId, data: SchoolUpdate) -> SchoolOut:
     await school_to_update.save()
 
     return school_to_out(school_to_update)
+
+
+async def school_exists_by_looma(loomaId: str) -> bool:
+    school = await School.find_one(School.Looma_Id == loomaId)
+    if not school:
+        return False
+    return True

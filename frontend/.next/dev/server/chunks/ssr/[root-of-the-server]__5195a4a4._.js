@@ -39,7 +39,7 @@ __turbopack_context__.s([
     "usersAPI",
     ()=>usersAPI
 ]);
-const API_BASE = "http://localhost:8000";
+const API_BASE = ("TURBOPACK compile-time value", "https://18003792-2c62-4d0c-a6ff-47ebbde9cad0-00-2wzdojdemmude.picard.replit.dev:8000") || "http://localhost:8000";
 // Check if current session is a viewer (no real backend token)
 function isViewerSession() {
     if ("TURBOPACK compile-time truthy", 1) return false;

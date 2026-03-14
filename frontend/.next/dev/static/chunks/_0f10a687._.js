@@ -3086,7 +3086,7 @@ function UserProfileModal({ user, open, onOpenChange }) {
         columnNumber: 5
     }, this);
 }
-_s(UserProfileModal, "5knlDASE8MNiRgPueMa2Vqo3YTc=", false, function() {
+_s(UserProfileModal, "tGV1nhCmKdcs4qwnaS19DNCaQng=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];
@@ -4894,6 +4894,10 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+const TerminalComponent = dynamic(()=>__turbopack_context__.A("[project]/components/terminal.tsx [app-client] (ecmascript, async loader)"), {
+    ssr: false
+});
+_c = TerminalComponent;
 const schoolImages = [
     "/schools/school-1.jpg",
     "/schools/school-2.jpg",
@@ -4910,21 +4914,21 @@ function DefaultSchoolImage({ schoolName }) {
                 className: "h-24 w-24 text-white/20 mx-auto"
             }, void 0, false, {
                 fileName: "[project]/components/school-detail-modal.tsx",
-                lineNumber: 35,
+                lineNumber: 40,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/school-detail-modal.tsx",
-            lineNumber: 34,
+            lineNumber: 39,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/school-detail-modal.tsx",
-        lineNumber: 33,
+        lineNumber: 38,
         columnNumber: 5
     }, this);
 }
-_c = DefaultSchoolImage;
+_c1 = DefaultSchoolImage;
 function getSchoolImage(schoolId) {
     const hash = schoolId.split("").reduce((acc, char)=>acc + char.charCodeAt(0), 0);
     return schoolImages[hash % schoolImages.length];
@@ -4959,7 +4963,7 @@ function FieldRow({ label, value, editMode, name, formState, onChange, type = "t
                 children: label
             }, void 0, false, {
                 fileName: "[project]/components/school-detail-modal.tsx",
-                lineNumber: 111,
+                lineNumber: 116,
                 columnNumber: 7
             }, this),
             editMode ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -4970,7 +4974,7 @@ function FieldRow({ label, value, editMode, name, formState, onChange, type = "t
                 className: `h-7 text-xs text-right w-40 ${mono ? "font-mono" : ""}`
             }, void 0, false, {
                 fileName: "[project]/components/school-detail-modal.tsx",
-                lineNumber: 113,
+                lineNumber: 118,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 className: `text-right break-words flex-1 ${mono ? "font-mono text-xs" : ""}`,
@@ -4980,22 +4984,22 @@ function FieldRow({ label, value, editMode, name, formState, onChange, type = "t
                     children: value
                 }, void 0, false, {
                     fileName: "[project]/components/school-detail-modal.tsx",
-                    lineNumber: 123,
+                    lineNumber: 128,
                     columnNumber: 13
                 }, this) : value || "N/A"
             }, void 0, false, {
                 fileName: "[project]/components/school-detail-modal.tsx",
-                lineNumber: 121,
+                lineNumber: 126,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/school-detail-modal.tsx",
-        lineNumber: 110,
+        lineNumber: 115,
         columnNumber: 5
     }, this);
 }
-_c1 = FieldRow;
+_c2 = FieldRow;
 function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
     _s();
     const { user } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
@@ -5156,21 +5160,10 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
     };
     // ── Terminal logic ──
     const openTerminal = ()=>{
-        if (!school) return;
         setTerminalOpen(true);
-        setTerminalLines([
-            `Connecting to ${school.loomaId?.toLowerCase() ?? "unknown"}.looma.local...`,
-            "Connection established.",
-            `Welcome to Looma OS v${school.looma?.version ?? "2.1.0"}`,
-            ""
-        ]);
     };
     const closeTerminal = ()=>{
         setTerminalOpen(false);
-        setTerminalLines([]);
-        setCurrentCommand("");
-        setCommandHistory([]);
-        setHistoryIndex(-1);
     };
     const simulateCommand = (cmd)=>{
         const command = cmd.trim().toLowerCase();
@@ -5332,7 +5325,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 423,
+                            lineNumber: 417,
                             columnNumber: 11
                         }, this),
                         imagePreview ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5342,7 +5335,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                             className: "object-cover"
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 433,
+                            lineNumber: 427,
                             columnNumber: 13
                         }, this) : localImage ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: localImage,
@@ -5352,7 +5345,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                             onError: ()=>setLocalImage(null)
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 435,
+                            lineNumber: 429,
                             columnNumber: 13
                         }, this) : school.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: school.image,
@@ -5362,7 +5355,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                             onError: ()=>setImageError(true)
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 443,
+                            lineNumber: 437,
                             columnNumber: 13
                         }, this) : !imageError ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: getSchoolImage(school.id),
@@ -5372,20 +5365,20 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                             onError: ()=>setImageError(true)
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 451,
+                            lineNumber: 445,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DefaultSchoolImage, {
                             schoolName: school.name
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 459,
+                            lineNumber: 453,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 462,
+                            lineNumber: 456,
                             columnNumber: 11
                         }, this),
                         editMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -5394,7 +5387,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                     className: "absolute inset-0 bg-black/40 z-10 pointer-events-none"
                                 }, void 0, false, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 466,
+                                    lineNumber: 460,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5407,7 +5400,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                             className: "h-7 w-7 text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-200"
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 479,
+                                            lineNumber: 473,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5415,7 +5408,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                             children: imagePreview ? "Change Image" : "Upload Image"
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 480,
+                                            lineNumber: 474,
                                             columnNumber: 17
                                         }, this),
                                         imagePreview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5423,13 +5416,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                             children: "✓ Selected"
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 484,
+                                            lineNumber: 478,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 467,
+                                    lineNumber: 461,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -5449,7 +5442,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                 children: school.name
                                             }, void 0, false, {
                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                lineNumber: 493,
+                                                lineNumber: 487,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -5462,7 +5455,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                         className: "h-4 w-4 drop-shadow-lg"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                        lineNumber: 503,
+                                                        lineNumber: 497,
                                                         columnNumber: 19
                                                     }, this),
                                                     school.palika || "N/A",
@@ -5473,13 +5466,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                lineNumber: 499,
+                                                lineNumber: 493,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                        lineNumber: 492,
+                                        lineNumber: 486,
                                         columnNumber: 15
                                     }, this),
                                     canEdit && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5497,14 +5490,14 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                             className: "h-3.5 w-3.5 mr-1"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                            lineNumber: 520,
+                                                            lineNumber: 514,
                                                             columnNumber: 25
                                                         }, this),
                                                         "Cancel"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                    lineNumber: 513,
+                                                    lineNumber: 507,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -5517,20 +5510,20 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                             className: "h-3.5 w-3.5 mr-1 animate-spin"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                            lineNumber: 530,
+                                                            lineNumber: 524,
                                                             columnNumber: 27
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
                                                             className: "h-3.5 w-3.5 mr-1"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                            lineNumber: 532,
+                                                            lineNumber: 526,
                                                             columnNumber: 27
                                                         }, this),
                                                         saving ? "Saving…" : "Save"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                    lineNumber: 523,
+                                                    lineNumber: 517,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
@@ -5544,36 +5537,36 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                     className: "h-3.5 w-3.5 mr-1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                    lineNumber: 544,
+                                                    lineNumber: 538,
                                                     columnNumber: 23
                                                 }, this),
                                                 "Edit"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 538,
+                                            lineNumber: 532,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                        lineNumber: 510,
+                                        lineNumber: 504,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                lineNumber: 491,
+                                lineNumber: 485,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 490,
+                            lineNumber: 484,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/school-detail-modal.tsx",
-                    lineNumber: 422,
+                    lineNumber: 416,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5586,7 +5579,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                     children: school.name
                                 }, void 0, false, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 556,
+                                    lineNumber: 550,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -5596,13 +5589,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 557,
+                                    lineNumber: 551,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 555,
+                            lineNumber: 549,
                             columnNumber: 11
                         }, this),
                         saveError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5610,7 +5603,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                             children: saveError
                         }, void 0, false, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 561,
+                            lineNumber: 555,
                             columnNumber: 13
                         }, this),
                         saveSuccess && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5620,14 +5613,14 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                     className: "h-3.5 w-3.5"
                                 }, void 0, false, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 567,
+                                    lineNumber: 561,
                                     columnNumber: 15
                                 }, this),
                                 "School information updated successfully."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 566,
+                            lineNumber: 560,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -5642,7 +5635,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                             children: "Info"
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 574,
+                                            lineNumber: 568,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -5651,13 +5644,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                             children: "Remote"
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 575,
+                                            lineNumber: 569,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 573,
+                                    lineNumber: 567,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5680,19 +5673,19 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 589,
+                                                                            lineNumber: 583,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         "School Information"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 588,
+                                                                    lineNumber: 582,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                lineNumber: 587,
+                                                                lineNumber: 581,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -5706,7 +5699,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                 children: "Name"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 596,
+                                                                                lineNumber: 590,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -5716,13 +5709,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                 className: "h-7 text-xs text-right w-40"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 597,
+                                                                                lineNumber: 591,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 595,
+                                                                        lineNumber: 589,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FieldRow, {
@@ -5734,7 +5727,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                         onChange: handleFormChange
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 605,
+                                                                        lineNumber: 599,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FieldRow, {
@@ -5746,7 +5739,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                         onChange: handleFormChange
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 613,
+                                                                        lineNumber: 607,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FieldRow, {
@@ -5758,7 +5751,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                         onChange: handleFormChange
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 621,
+                                                                        lineNumber: 615,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     editMode ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -5771,7 +5764,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                         children: "Latitude"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                        lineNumber: 632,
+                                                                                        lineNumber: 626,
                                                                                         columnNumber: 29
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -5782,13 +5775,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                         className: "h-7 text-xs text-right w-40 font-mono"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                        lineNumber: 633,
+                                                                                        lineNumber: 627,
                                                                                         columnNumber: 29
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 631,
+                                                                                lineNumber: 625,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5799,7 +5792,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                         children: "Longitude"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                        lineNumber: 642,
+                                                                                        lineNumber: 636,
                                                                                         columnNumber: 29
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -5810,13 +5803,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                         className: "h-7 text-xs text-right w-40 font-mono"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                        lineNumber: 643,
+                                                                                        lineNumber: 637,
                                                                                         columnNumber: 29
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 641,
+                                                                                lineNumber: 635,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
@@ -5828,7 +5821,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                 children: "Coordinates"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 654,
+                                                                                lineNumber: 648,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5840,25 +5833,25 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 655,
+                                                                                lineNumber: 649,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 653,
+                                                                        lineNumber: 647,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                lineNumber: 593,
+                                                                lineNumber: 587,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                        lineNumber: 586,
+                                                        lineNumber: 580,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -5872,19 +5865,19 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 667,
+                                                                            lineNumber: 661,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         "Contact Information"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 666,
+                                                                    lineNumber: 660,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                lineNumber: 665,
+                                                                lineNumber: 659,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -5901,14 +5894,14 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                             className: "h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                            lineNumber: 676,
+                                                                                            lineNumber: 670,
                                                                                             columnNumber: 31
                                                                                         }, this),
                                                                                         " Headmaster"
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 675,
+                                                                                    lineNumber: 669,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -5918,13 +5911,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     className: "h-7 text-xs text-right w-40"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 678,
+                                                                                    lineNumber: 672,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 674,
+                                                                            lineNumber: 668,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5937,14 +5930,14 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                             className: "h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                            lineNumber: 687,
+                                                                                            lineNumber: 681,
                                                                                             columnNumber: 31
                                                                                         }, this),
                                                                                         " Email"
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 686,
+                                                                                    lineNumber: 680,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -5955,13 +5948,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     className: "h-7 text-xs text-right w-40"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 689,
+                                                                                    lineNumber: 683,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 685,
+                                                                            lineNumber: 679,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5974,14 +5967,14 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                             className: "h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                            lineNumber: 699,
+                                                                                            lineNumber: 693,
                                                                                             columnNumber: 31
                                                                                         }, this),
                                                                                         " Phone"
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 698,
+                                                                                    lineNumber: 692,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -5992,13 +5985,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     className: "h-7 text-xs text-right w-40"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 701,
+                                                                                    lineNumber: 695,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 697,
+                                                                            lineNumber: 691,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
@@ -6011,7 +6004,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     className: "h-4 w-4 text-muted-foreground shrink-0 mt-0.5"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 713,
+                                                                                    lineNumber: 707,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6019,13 +6012,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     children: school.contact?.headmaster || "N/A"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 714,
+                                                                                    lineNumber: 708,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 712,
+                                                                            lineNumber: 706,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6035,7 +6028,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     className: "h-4 w-4 text-muted-foreground shrink-0 mt-0.5"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 717,
+                                                                                    lineNumber: 711,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 school.contact?.email ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -6044,20 +6037,20 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     children: school.contact.email
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 719,
+                                                                                    lineNumber: 713,
                                                                                     columnNumber: 31
                                                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                     className: "text-muted-foreground",
                                                                                     children: "N/A"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 723,
+                                                                                    lineNumber: 717,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 716,
+                                                                            lineNumber: 710,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6067,7 +6060,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     className: "h-4 w-4 text-muted-foreground shrink-0 mt-0.5"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 727,
+                                                                                    lineNumber: 721,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 school.contact?.phone ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -6076,33 +6069,33 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                     children: school.contact.phone
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 729,
+                                                                                    lineNumber: 723,
                                                                                     columnNumber: 31
                                                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                     className: "text-muted-foreground",
                                                                                     children: "N/A"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 733,
+                                                                                    lineNumber: 727,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 726,
+                                                                            lineNumber: 720,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                lineNumber: 671,
+                                                                lineNumber: 665,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                        lineNumber: 664,
+                                                        lineNumber: 658,
                                                         columnNumber: 19
                                                     }, this),
                                                     !isViewer && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -6116,19 +6109,19 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 746,
+                                                                            lineNumber: 740,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         "Looma Device"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 745,
+                                                                    lineNumber: 739,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                lineNumber: 744,
+                                                                lineNumber: 738,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -6144,7 +6137,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                         mono: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 751,
+                                                                        lineNumber: 745,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FieldRow, {
@@ -6157,7 +6150,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                         mono: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 760,
+                                                                        lineNumber: 754,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FieldRow, {
@@ -6170,30 +6163,30 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                         mono: true
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                                        lineNumber: 769,
+                                                                        lineNumber: 763,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                lineNumber: 750,
+                                                                lineNumber: 744,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                        lineNumber: 743,
+                                                        lineNumber: 737,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                lineNumber: 583,
+                                                lineNumber: 577,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 582,
+                                            lineNumber: 576,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -6209,19 +6202,19 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 789,
+                                                                    lineNumber: 783,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 "Remote Shell Access"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                            lineNumber: 788,
+                                                            lineNumber: 782,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                        lineNumber: 787,
+                                                        lineNumber: 781,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -6240,7 +6233,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 797,
+                                                                            lineNumber: 791,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -6252,110 +6245,50 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                                 className: "h-4 w-4"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 801,
+                                                                                lineNumber: 795,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 800,
+                                                                            lineNumber: 794,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 796,
+                                                                    lineNumber: 790,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    ref: terminalRef,
-                                                                    className: "bg-zinc-900 text-green-400 rounded-lg p-4 font-mono text-sm h-64 overflow-y-auto",
-                                                                    onClick: ()=>inputRef.current?.focus(),
-                                                                    children: [
-                                                                        terminalLines.map((line, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: line.startsWith("looma@device") ? "text-cyan-400" : "text-green-400",
-                                                                                children: line || "\u00A0"
-                                                                            }, i, false, {
-                                                                                fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                lineNumber: 811,
-                                                                                columnNumber: 29
-                                                                            }, this)),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                            className: "flex items-center",
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                    className: "text-cyan-400",
-                                                                                    children: "looma@device:~$ "
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 816,
-                                                                                    columnNumber: 29
-                                                                                }, this),
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                                    ref: inputRef,
-                                                                                    type: "text",
-                                                                                    value: currentCommand,
-                                                                                    onChange: (e)=>setCurrentCommand(e.target.value),
-                                                                                    onKeyDown: handleCommand,
-                                                                                    className: "flex-1 bg-transparent border-none outline-none text-green-400 font-mono",
-                                                                                    autoFocus: true
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 817,
-                                                                                    columnNumber: 29
-                                                                                }, this),
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                    className: "animate-pulse",
-                                                                                    children: "_"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/school-detail-modal.tsx",
-                                                                                    lineNumber: 826,
-                                                                                    columnNumber: 29
-                                                                                }, this)
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 815,
-                                                                            columnNumber: 27
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
+                                                                    className: "rounded-lg overflow-hidden h-96",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TerminalComponent, {
+                                                                        socketUrl: `/api/ws/terminal/${'r9993'}`,
+                                                                        className: "h-full"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/school-detail-modal.tsx",
+                                                                        lineNumber: 800,
+                                                                        columnNumber: 27
+                                                                    }, this)
+                                                                }, void 0, false, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 805,
+                                                                    lineNumber: 799,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                     className: "text-xs text-muted-foreground",
                                                                     children: [
-                                                                        "Type ",
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
-                                                                            className: "bg-muted px-1 rounded",
-                                                                            children: "help"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 831,
-                                                                            columnNumber: 32
-                                                                        }, this),
-                                                                        " for available commands,",
-                                                                        " ",
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
-                                                                            className: "bg-muted px-1 rounded",
-                                                                            children: "exit"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 832,
-                                                                            columnNumber: 27
-                                                                        }, this),
-                                                                        " to close"
+                                                                        "Connected to ",
+                                                                        school.loomaId || "Unknown Device"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 830,
+                                                                    lineNumber: 806,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                            lineNumber: 795,
+                                                            lineNumber: 789,
                                                             columnNumber: 23
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "space-y-4",
@@ -6365,7 +6298,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                     children: "Open a secure SSH connection to remotely access and manage this Looma device."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 837,
+                                                                    lineNumber: 812,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6380,7 +6313,7 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 841,
+                                                                            lineNumber: 816,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6391,13 +6324,13 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 844,
+                                                                            lineNumber: 819,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 840,
+                                                                    lineNumber: 815,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -6408,65 +6341,65 @@ function SchoolDetailModal({ school, isOpen, onClose, onUpdated }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                                            lineNumber: 847,
+                                                                            lineNumber: 822,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         "Open Remote Shell"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                                                    lineNumber: 846,
+                                                                    lineNumber: 821,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                                            lineNumber: 836,
+                                                            lineNumber: 811,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/school-detail-modal.tsx",
-                                                        lineNumber: 793,
+                                                        lineNumber: 787,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/school-detail-modal.tsx",
-                                                lineNumber: 786,
+                                                lineNumber: 780,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/school-detail-modal.tsx",
-                                            lineNumber: 785,
+                                            lineNumber: 779,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/school-detail-modal.tsx",
-                                    lineNumber: 580,
+                                    lineNumber: 574,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/school-detail-modal.tsx",
-                            lineNumber: 572,
+                            lineNumber: 566,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/school-detail-modal.tsx",
-                    lineNumber: 554,
+                    lineNumber: 548,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/school-detail-modal.tsx",
-            lineNumber: 420,
+            lineNumber: 414,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/school-detail-modal.tsx",
-        lineNumber: 419,
+        lineNumber: 413,
         columnNumber: 5
     }, this);
 }
@@ -6475,11 +6408,12 @@ _s(SchoolDetailModal, "HhJQWU68aqC4X3FswZuJJw0YGm4=", false, function() {
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];
 });
-_c2 = SchoolDetailModal;
-var _c, _c1, _c2;
-__turbopack_context__.k.register(_c, "DefaultSchoolImage");
-__turbopack_context__.k.register(_c1, "FieldRow");
-__turbopack_context__.k.register(_c2, "SchoolDetailModal");
+_c3 = SchoolDetailModal;
+var _c, _c1, _c2, _c3;
+__turbopack_context__.k.register(_c, "TerminalComponent");
+__turbopack_context__.k.register(_c1, "DefaultSchoolImage");
+__turbopack_context__.k.register(_c2, "FieldRow");
+__turbopack_context__.k.register(_c3, "SchoolDetailModal");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -9586,7 +9520,7 @@ function AdminPanel({ isOpen, onClose, onSchoolAdded }) {
         ]
     }, void 0, true);
 }
-_s(AdminPanel, "wwSRmLdJDFmF3pSxeESk4Q5FTRI=", false, function() {
+_s(AdminPanel, "ofUQRBpWVlMxYLCdGNdKXh57gzU=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];

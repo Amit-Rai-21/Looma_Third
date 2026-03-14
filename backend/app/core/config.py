@@ -17,6 +17,11 @@ class Settings(BaseSettings):
     GMAIL_HOST: str = "smtp.gmail.com"
     GMAIL_PORT: int = 587
 
+    # SSH
+    SSH_USERNAME: str = ""
+    SSH_PASSWORD: str = ""
+    SSH_HOSTNAME: str = ""
+
     model_config = SettingsConfigDict(env_file=".env")
 
 settings = Settings()

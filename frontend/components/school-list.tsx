@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import type { School } from "@/lib/types"
-import { useAuth } from "@/lib/auth-context"
-import { schoolsAPI } from "@/lib/api-client"
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { useState } from "react";
+import type { School } from "@/lib/types";
+import { useAuth } from "@/lib/auth-context";
+import { schoolsAPI } from "@/lib/api-client";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,7 +23,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog"
+} from "@/components/ui/alert-dialog";
 import {
   ChevronDown,
   ChevronUp,
@@ -25,83 +32,90 @@ import {
   Loader2,
   Trash2,
   Download,
-} from "lucide-react"
-import { useToast } from "@/hooks/use-toast"
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface SchoolListProps {
-  schools: School[]
-  onSchoolSelect: (school: School) => void
-  onSchoolsChanged?: () => void
+  schools: School[];
+  onSchoolSelect: (school: School) => void;
+  onSchoolsChanged?: () => void;
 }
 
-type SortField = "name" | "district" | "province"
-type SortDirection = "asc" | "desc"
+type SortField = "name" | "district" | "province" | "loomaId";
+type SortDirection = "asc" | "desc";
 
-export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: SchoolListProps) {
-  const { user } = useAuth()
-  const { toast } = useToast()
-  const isAdmin = user?.role === "admin"
-  const isViewer = user?.role === "viewer"
+export function SchoolList({
+  schools,
+  onSchoolSelect,
+  onSchoolsChanged,
+}: SchoolListProps) {
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const isAdmin = user?.role === "admin";
+  const isViewer = user?.role === "viewer";
 
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
-  const [sortField, setSortField] = useState<SortField>("name")
-  const [sortDirection, setSortDirection] = useState<SortDirection>("asc")
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false)
-  const [isDeleting, setIsDeleting] = useState(false)
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [sortField, setSortField] = useState<SortField>("loomaId");
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const handleSort = (field: SortField) => {
     if (sortField === field) {
-      setSortDirection(sortDirection === "asc" ? "desc" : "asc")
+      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
-      setSortField(field)
-      setSortDirection("asc")
+      setSortField(field);
+      setSortDirection("asc");
     }
-  }
+  };
 
   const sortedSchools = [...schools].sort((a, b) => {
-    let comparison = 0
+    let comparison = 0;
     switch (sortField) {
       case "name":
-        comparison = a.name.localeCompare(b.name)
-        break
+        comparison = a.name.localeCompare(b.name);
+        break;
       case "district":
-        comparison = (a.district || "").localeCompare(b.district || "")
-        break
+        comparison = (a.district || "").localeCompare(b.district || "");
+        break;
       case "province":
-        comparison = (a.province || "").localeCompare(b.province || "")
-        break
+        comparison = (a.province || "").localeCompare(b.province || "");
+        break;
+      case "loomaId":
+        comparison = (a.loomaId || "").localeCompare(b.loomaId || "");
+        break;
     }
-    return sortDirection === "asc" ? comparison : -comparison
-  })
+    return sortDirection === "asc" ? comparison : -comparison;
+  });
 
   const toggleSelectAll = () => {
     if (selectedIds.size === schools.length) {
-      setSelectedIds(new Set())
+      setSelectedIds(new Set());
     } else {
-      setSelectedIds(new Set(schools.map((s) => s.id)))
+      setSelectedIds(new Set(schools.map((s) => s.id)));
     }
-  }
+  };
 
   const toggleSelect = (id: string) => {
-    const newSelected = new Set(selectedIds)
+    const newSelected = new Set(selectedIds);
     if (newSelected.has(id)) {
-      newSelected.delete(id)
+      newSelected.delete(id);
     } else {
-      newSelected.add(id)
+      newSelected.add(id);
     }
-    setSelectedIds(newSelected)
-  }
+    setSelectedIds(newSelected);
+  };
 
   const handleExport = () => {
-    const selectedSchools = schools.filter((s) => selectedIds.has(s.id))
-    
+    const selectedSchools = schools.filter((s) => selectedIds.has(s.id));
+
     if (selectedSchools.length === 0) {
       toast({
         title: "No schools selected",
         description: "Please select at least one school to export.",
         variant: "destructive",
-      })
-      return
+      });
+      return;
     }
 
     const headers = [
@@ -118,7 +132,7 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
       "Longitude",
       "Serial Number",
       "Version",
-    ]
+    ];
 
     const rows = selectedSchools.map((s) => [
       s.id,
@@ -134,42 +148,42 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
       s.longitude || "",
       s.looma?.serialNumber || "",
       s.looma?.version || "",
-    ])
+    ]);
 
     const csvContent = [headers, ...rows]
       .map((row) => row.map((cell) => `"${cell}"`).join(","))
-      .join("\n")
+      .join("\n");
 
-    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement("a")
-    link.href = url
-    link.download = `looma-schools-export-${new Date().toISOString().split("T")[0]}.csv`
-    link.click()
-    URL.revokeObjectURL(url)
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `looma-schools-export-${new Date().toISOString().split("T")[0]}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
 
     toast({
       title: "Export successful",
       description: `Exported ${selectedSchools.length} school${selectedSchools.length > 1 ? "s" : ""} to CSV.`,
-    })
+    });
 
-    setSelectedIds(new Set())
-  }
+    setSelectedIds(new Set());
+  };
 
   const handleRemove = async () => {
-    setIsDeleting(true)
-    const selectedSchools = schools.filter((s) => selectedIds.has(s.id))
-    let successCount = 0
-    let failCount = 0
+    setIsDeleting(true);
+    const selectedSchools = schools.filter((s) => selectedIds.has(s.id));
+    let successCount = 0;
+    let failCount = 0;
 
     try {
       for (const school of selectedSchools) {
         try {
-          await schoolsAPI.delete(school.id)
-          successCount++
+          await schoolsAPI.delete(school.id);
+          successCount++;
         } catch (error) {
-          console.error(`Failed to delete school ${school.id}:`, error)
-          failCount++
+          console.error(`Failed to delete school ${school.id}:`, error);
+          failCount++;
         }
       }
 
@@ -177,9 +191,9 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
         toast({
           title: "Schools removed",
           description: `Successfully removed ${successCount} school${successCount > 1 ? "s" : ""}.`,
-        })
-        setSelectedIds(new Set())
-        onSchoolsChanged?.()
+        });
+        setSelectedIds(new Set());
+        onSchoolsChanged?.();
       }
 
       if (failCount > 0) {
@@ -187,28 +201,29 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
           title: "Some deletions failed",
           description: `Failed to remove ${failCount} school${failCount > 1 ? "s" : ""}.`,
           variant: "destructive",
-        })
+        });
       }
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to remove schools. Please try again.",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsDeleting(false)
-      setShowDeleteDialog(false)
+      setIsDeleting(false);
+      setShowDeleteDialog(false);
     }
-  }
+  };
 
   const SortIcon = ({ field }: { field: SortField }) => {
-    if (sortField !== field) return <ArrowUpDown className="ml-2 h-3.5 w-3.5 opacity-40" />
+    if (sortField !== field)
+      return <ArrowUpDown className="ml-2 h-3.5 w-3.5 opacity-40" />;
     return sortDirection === "asc" ? (
       <ChevronUp className="ml-2 h-3.5 w-3.5 text-[#f5c842]" />
     ) : (
       <ChevronDown className="ml-2 h-3.5 w-3.5 text-[#f5c842]" />
-    )
-  }
+    );
+  };
 
   if (schools.length === 0) {
     return (
@@ -218,10 +233,12 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
             <Download className="h-8 w-8 text-gray-400" />
           </div>
           <p className="text-gray-600 font-medium text-lg">No schools found</p>
-          <p className="text-gray-400 text-sm">Try adjusting your search criteria</p>
+          <p className="text-gray-400 text-sm">
+            Try adjusting your search criteria
+          </p>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -230,7 +247,9 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
         <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-[#1a2c5b] to-[#2d4278] border border-[#3d5080] rounded-xl shadow-lg animate-in slide-in-from-top-2">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-[#f5c842] flex items-center justify-center">
-              <span className="text-[#1a2c5b] font-bold text-sm">{selectedIds.size}</span>
+              <span className="text-[#1a2c5b] font-bold text-sm">
+                {selectedIds.size}
+              </span>
             </div>
             <span className="text-white font-semibold">selected</span>
           </div>
@@ -268,14 +287,18 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
               {isAdmin && (
                 <TableHead className="w-12 pl-6">
                   <Checkbox
-                    checked={selectedIds.size === schools.length && schools.length > 0}
+                    checked={
+                      selectedIds.size === schools.length && schools.length > 0
+                    }
                     onCheckedChange={toggleSelectAll}
                     aria-label="Select all"
                     className="border-gray-400 data-[state=checked]:bg-[#1a2c5b] data-[state=checked]:border-[#1a2c5b]"
                   />
                 </TableHead>
               )}
-              <TableHead className="w-16 text-center font-semibold text-gray-700">#</TableHead>
+              <TableHead className="w-16 text-center font-semibold text-gray-700">
+                #
+              </TableHead>
               <TableHead>
                 <button
                   onClick={() => handleSort("name")}
@@ -285,9 +308,11 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
                   <SortIcon field="name" />
                 </button>
               </TableHead>
-              {/* Looma ID column — hidden for viewer */}
+              {/* Looma ID column — always sorted asc, hidden for viewer */}
               {!isViewer && (
-                <TableHead className="font-semibold text-gray-700">Looma ID</TableHead>
+                <TableHead className="font-semibold text-gray-700">
+                  Looma ID
+                </TableHead>
               )}
               <TableHead>
                 <button
@@ -307,7 +332,9 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
                   <SortIcon field="province" />
                 </button>
               </TableHead>
-              <TableHead className="font-semibold text-gray-700">Headmaster</TableHead>
+              <TableHead className="font-semibold text-gray-700">
+                Headmaster
+              </TableHead>
             </TableRow>
           </TableHeader>
 
@@ -319,7 +346,10 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
                 onClick={() => onSchoolSelect(school)}
               >
                 {isAdmin && (
-                  <TableCell onClick={(e) => e.stopPropagation()} className="pl-6">
+                  <TableCell
+                    onClick={(e) => e.stopPropagation()}
+                    className="pl-6"
+                  >
                     <Checkbox
                       checked={selectedIds.has(school.id)}
                       onCheckedChange={() => toggleSelect(school.id)}
@@ -328,17 +358,27 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
                     />
                   </TableCell>
                 )}
-                <TableCell className="text-center text-gray-500 font-mono text-sm font-medium">{index + 1}</TableCell>
+                <TableCell className="text-center text-gray-500 font-mono text-sm font-medium">
+                  {index + 1}
+                </TableCell>
                 <TableCell className="font-semibold text-gray-900 max-w-[300px] truncate group-hover:text-[#1a2c5b] transition-colors">
                   {school.name}
                 </TableCell>
                 {/* Looma ID cell — hidden for viewer */}
                 {!isViewer && (
-                  <TableCell className="font-mono text-sm text-[#0891b2] font-medium">{school.loomaId}</TableCell>
+                  <TableCell className="font-mono text-sm text-[#0891b2] font-medium">
+                    {school.loomaId}
+                  </TableCell>
                 )}
-                <TableCell className="text-gray-700">{school.district}</TableCell>
-                <TableCell className="text-gray-700">{school.province}</TableCell>
-                <TableCell className="max-w-[180px] truncate text-gray-600">{school.contact?.headmaster || "N/A"}</TableCell>
+                <TableCell className="text-gray-700">
+                  {school.district}
+                </TableCell>
+                <TableCell className="text-gray-700">
+                  {school.province}
+                </TableCell>
+                <TableCell className="max-w-[180px] truncate text-gray-600">
+                  {school.contact?.headmaster || "N/A"}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -358,8 +398,9 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
           <AlertDialogHeader>
             <AlertDialogTitle>Are you sure?</AlertDialogTitle>
             <AlertDialogDescription>
-              This will permanently delete {selectedIds.size} school{selectedIds.size > 1 ? "s" : ""} from the database.
-              This action cannot be undone.
+              This will permanently delete {selectedIds.size} school
+              {selectedIds.size > 1 ? "s" : ""} from the database. This action
+              cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -382,5 +423,5 @@ export function SchoolList({ schools, onSchoolSelect, onSchoolsChanged }: School
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  )
+  );
 }
