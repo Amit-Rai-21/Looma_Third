@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev -p 5000",
     "build": "next build",
-    "start": "next start -p 5000",
+    "start": "next start -p 41002",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -73,6 +73,8 @@
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
     "xlsx": "^0.18.5",
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.8.0",
     "zod": "3.25.76"
   },
   "devDependencies": {

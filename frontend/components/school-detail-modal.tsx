@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, type KeyboardEvent } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { School } from "@/lib/types";
 import { useAuth } from "@/lib/auth-context";
 import { schoolsAPI } from "@/lib/api-client";
@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -30,6 +29,7 @@ import {
   Loader2,
   Check,
   Camera,
+  ExternalLink,
 } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -182,12 +182,7 @@ export function SchoolDetailModal({
   const canAccessSSH = user?.role === "admin";
   const canEdit = user?.role === "admin" || user?.role === "staff";
 
-  // ── Terminal state ──
   const [terminalOpen, setTerminalOpen] = useState(false);
-  const [terminalLines, setTerminalLines] = useState<string[]>([]);
-  const [currentCommand, setCurrentCommand] = useState("");
-  const [commandHistory, setCommandHistory] = useState<string[]>([]);
-  const [historyIndex, setHistoryIndex] = useState(-1);
   const [imageError, setImageError] = useState(false);
 
   // ── Edit state ──
@@ -202,17 +197,6 @@ export function SchoolDetailModal({
   const [localImage, setLocalImage] = useState<string | null>(null);
 
   const imageInputRef = useRef<HTMLInputElement>(null);
-  const terminalRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    if (terminalOpen && inputRef.current) inputRef.current.focus();
-  }, [terminalOpen]);
-
-  useEffect(() => {
-    if (terminalRef.current)
-      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
-  }, [terminalLines]);
 
   const schoolImage: string | null = (school as any)?.image ?? null;
 
@@ -339,133 +323,6 @@ export function SchoolDetailModal({
 
   const closeTerminal = () => {
     setTerminalOpen(false);
-  };
-
-  const simulateCommand = (cmd: string): string[] => {
-    const command = cmd.trim().toLowerCase();
-    if (!school) return ["Error: No device connected"];
-
-    if (command === "help") {
-      return [
-        "Available commands:",
-        "  help          - Show this help message",
-        "  uptime        - Show device uptime",
-        "  df            - Show disk usage",
-        "  free          - Show memory usage",
-        "  looma info    - Show Looma device info",
-        "  looma update  - Check for updates",
-        "  looma sync    - Sync content library",
-        "  exit          - Close terminal session",
-        "",
-      ];
-    }
-    if (command === "uptime") {
-      const hours = Math.floor(Math.random() * 720) + 24;
-      const days = Math.floor(hours / 24);
-      return [`System uptime: ${days} days, ${hours % 24} hours`, ""];
-    }
-    if (command === "df" || command === "df -h") {
-      return [
-        "Filesystem      Size  Used Avail Use% Mounted on",
-        "/dev/sda1        32G   18G   12G  60% /",
-        "/dev/sdb1       256G  142G  102G  58% /content",
-        "",
-      ];
-    }
-    if (command === "free" || command === "free -h") {
-      return [
-        "              total        used        free      shared  buff/cache   available",
-        "Mem:          3.8Gi       1.2Gi       1.1Gi        52Mi       1.5Gi       2.3Gi",
-        "Swap:         2.0Gi          0B       2.0Gi",
-        "",
-      ];
-    }
-    if (command === "looma info") {
-      return [
-        "Looma Device Information",
-        "------------------------",
-        `  Device ID: ${school.loomaId ?? "Unknown"}`,
-        `  Serial: ${school.looma?.serialNumber ?? "N/A"}`,
-        `  Version: ${school.looma?.version ?? "2.1.0"}`,
-        `  School: ${school.name}`,
-        "",
-      ];
-    }
-    if (command === "looma update") {
-      return [
-        "Checking for updates...",
-        "Current version: " + (school.looma?.version ?? "2.1.0"),
-        "Latest version: 2.1.0",
-        "System is up to date.",
-        "",
-      ];
-    }
-    if (command === "looma sync") {
-      return [
-        "Syncing content library...",
-        "Checking content manifest...",
-        "All content is up to date.",
-        "Sync complete.",
-        "",
-      ];
-    }
-    if (command === "exit" || command === "quit" || command === "logout") {
-      setTimeout(closeTerminal, 500);
-      return ["Connection closed.", ""];
-    }
-    if (command === "clear") {
-      setTerminalLines([]);
-      return [];
-    }
-    if (command === "whoami")
-      return [`looma@${school.loomaId?.toLowerCase() ?? "device"}`, ""];
-    if (command === "pwd") return ["/home/looma", ""];
-    if (command === "ls") return ["content/  logs/  scripts/  config.json", ""];
-    if (command === "date") return [new Date().toString(), ""];
-    if (command === "") return [];
-    return [
-      `bash: ${cmd}: command not found`,
-      "Type 'help' for available commands.",
-      "",
-    ];
-  };
-
-  const handleCommand = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && currentCommand.trim()) {
-      const newLines = [
-        ...terminalLines,
-        `looma@device:~$ ${currentCommand}`,
-        ...simulateCommand(currentCommand),
-      ];
-      setTerminalLines(newLines);
-      setCommandHistory([...commandHistory, currentCommand]);
-      setCurrentCommand("");
-      setHistoryIndex(-1);
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      if (commandHistory.length > 0) {
-        const newIndex =
-          historyIndex < commandHistory.length - 1
-            ? historyIndex + 1
-            : historyIndex;
-        setHistoryIndex(newIndex);
-        setCurrentCommand(
-          commandHistory[commandHistory.length - 1 - newIndex] || "",
-        );
-      }
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      if (historyIndex > 0) {
-        const newIndex = historyIndex - 1;
-        setHistoryIndex(newIndex);
-        setCurrentCommand(
-          commandHistory[commandHistory.length - 1 - newIndex] || "",
-        );
-      } else if (historyIndex === 0) {
-        setHistoryIndex(-1);
-        setCurrentCommand("");
-      }
-    }
   };
 
   if (!school) return null;
@@ -642,11 +499,11 @@ export function SchoolDetailModal({
           )}
 
           <Tabs defaultValue="info" className="flex-1 flex flex-col min-h-0">
-            <TabsList
-              className={`grid w-full ${canAccessSSH ? "grid-cols-2" : "grid-cols-1"}`}
-            >
+            <TabsList className={`grid w-full ${canAccessSSH ? "grid-cols-2" : "grid-cols-1"}`}>
               <TabsTrigger value="info">Info</TabsTrigger>
-              {canAccessSSH && <TabsTrigger value="remote">Remote</TabsTrigger>}
+              {canAccessSSH && (
+                <TabsTrigger value="remote">Remote</TabsTrigger>
+              )}
             </TabsList>
 
             <div className="flex-1 mt-4 min-h-0 overflow-auto pr-2 space-y-4">
@@ -731,19 +588,9 @@ export function SchoolDetailModal({
                         </>
                       ) : (
                         <div className="flex justify-between gap-4 items-center">
-                          <span className="text-muted-foreground shrink-0">
-                            Coordinates
-                          </span>
+                          <span className="text-muted-foreground shrink-0">Coordinates</span>
                           <code className="font-mono text-xs text-right">
-                            [
-                            {school.latitude != null
-                              ? school.latitude.toFixed(2)
-                              : "N/A"}
-                            ,{" "}
-                            {school.longitude != null
-                              ? school.longitude.toFixed(2)
-                              : "N/A"}
-                            ]
+                            [{school.latitude != null ? school.latitude.toFixed(2) : "N/A"}, {school.longitude != null ? school.longitude.toFixed(2) : "N/A"}]
                           </code>
                         </div>
                       )}
@@ -900,19 +747,30 @@ export function SchoolDetailModal({
                             {school.loomaId?.toLowerCase() ?? "device"}
                             .looma.local
                           </span>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={closeTerminal}
-                            className="h-6 w-6 p-0"
-                          >
-                            <X className="h-4 w-4" />
-                          </Button>
+                          <div className="flex items-center gap-1">
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => window.open(`/terminal/${school.loomaId}`, "_blank")}
+                              className="h-6 w-6 p-0"
+                              title="Open in new tab"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                            </Button>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              onClick={closeTerminal}
+                              className="h-6 w-6 p-0"
+                              title="Close terminal"
+                            >
+                              <X className="h-4 w-4" />
+                            </Button>
+                          </div>
                         </div>
-
-                        <div className="rounded-lg overflow-hidden h-96">
+                        <div className="rounded-lg overflow-hidden h-64">
                           <TerminalComponent
-                            socketUrl={`/api/ws/terminal/${school.loomaId}`}
+                            socketUrl={`${typeof window !== "undefined" ? (window.location.protocol === "https:" ? "wss" : "ws") : "ws"}://${typeof window !== "undefined" ? window.location.host : "localhost"}/api/ws/terminal/${school.loomaId}`}
                             className="h-full"
                           />
                         </div>
