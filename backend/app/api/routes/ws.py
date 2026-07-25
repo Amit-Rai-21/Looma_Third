@@ -1,30 +1,37 @@
 import paramiko
 import asyncio
 import json
-
 from fastapi import APIRouter, Depends, WebSocket, WebSocketDisconnect
-
 from app.core.deps import admin_only_ws
 from app.core.config import settings
 from app.services.schools import school_exists_by_looma
 
 router = APIRouter()
 
+
 @router.websocket("/terminal/{looma_id}")
-async def terminal_ws(ws: WebSocket, looma_id: str, _ = Depends(admin_only_ws)):
+async def terminal_ws(ws: WebSocket, looma_id: str):
     await ws.accept()
-    
-    if not school_exists_by_looma(looma_id):
+
+    try:
+        user = await admin_only_ws(ws)
+    except RuntimeError:
+        await ws.close(code=4401)
+        return
+
+    if not await school_exists_by_looma(looma_id):
         await ws.close(code=4404)
         return
 
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-    client.connect(hostname=settings.SSH_HOSTNAME, username=settings.SSH_USERNAME, password=settings.SSH_PASSWORD)
+    client.connect(
+        hostname=settings.SSH_HOSTNAME,
+        username=settings.SSH_USERNAME,
+        password=settings.SSH_PASSWORD,
+    )
 
     remote_command = f"looma access {looma_id} && clear && echo 'could not connect to device' && exit\n"
-
     channel = client.invoke_shell(term="xterm", width=80, height=24)
     channel.send(remote_command.encode())
 
@@ -38,7 +45,6 @@ async def terminal_ws(ws: WebSocket, looma_id: str, _ = Depends(admin_only_ws)):
     async def ws_to_ssh():
         while True:
             data = await ws.receive_text()
-
             if data.startswith("{"):
                 msg = json.loads(data)
                 if msg["type"] == "resize":
