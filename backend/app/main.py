@@ -18,10 +18,12 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 origins = [
-    "http://localhost:5000",
-    "http://127.0.0.1:5000",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "http://localhost:41001",
+    "http://127.0.0.1:41001",
+    "http://localhost:41002",
+    "http://127.0.0.1:41002",
+    "http://44.254.224.102",
+    "https://schools.looma.website"
 ]
 
 replit_dev_domain = os.environ.get("REPLIT_DEV_DOMAIN", "")

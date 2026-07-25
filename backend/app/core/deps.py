@@ -74,18 +74,15 @@ async def admin_only_ws(ws: WebSocket):
     session_token = ws.cookies.get(settings.SESSION_COOKIE_NAME)
     if not session_token:
         logger.error("Missing session token")
-        await ws.close(code=4401)
         raise RuntimeError("Unauthenticated WebSocket")
 
     user = await get_user_from_session(session_token)
     if not user:
         logger.error("Invalid session")
-        await ws.close(code=4401)
         raise RuntimeError("Invalid session")
 
     if user.role != "admin":
         logger.error("User is not admin")
-        await ws.close(code=4403)
         raise RuntimeError("Forbidden")
 
     return user
