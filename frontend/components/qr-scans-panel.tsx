@@ -6,6 +6,8 @@ import { useAuth } from "@/lib/auth-context"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
+import { NepalMap } from "./nepal-map"
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,7 +18,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
-import { FileDown, Trash2, Loader2 } from "lucide-react"
+import { FileDown, Trash2, Loader2, ChevronUp, ChevronDown, ArrowUpDown } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 type ScanRow = {
@@ -43,8 +45,11 @@ function formatCoordinate(v: any): string {
   if (isNaN(num)) return "-"
   return num.toFixed(2)
 }
-
-export function QRScansPanel() {
+interface QRScansPanelProps {
+  viewMode?: "list" | "map"
+  onScanSelect?: (scan: ScanRow) => void
+}
+export function QRScansPanel({ viewMode = "list", onScanSelect }: QRScansPanelProps) {
   const { user } = useAuth()
   const { toast } = useToast()
   const isAdmin = user?.role === "admin"
@@ -52,6 +57,8 @@ export function QRScansPanel() {
   const [rows, setRows] = useState<ScanRow[]>([])
   const [loading, setLoading] = useState(false)
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
+  const [sortField, setSortField] = useState<"serial" | "school" | null>(null)
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc")
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
 
@@ -100,6 +107,27 @@ export function QRScansPanel() {
       clearInterval(interval)
     }
   }, [])
+  const handleSort = (field: "serial" | "school") => {
+  if (sortField !== field) {
+    setSortField(field)
+    setSortDirection("asc")
+  } else if (sortDirection === "asc") {
+    setSortDirection("desc")
+  } else {
+    // third click: reset to original (unsorted) order
+    setSortField(null)
+    setSortDirection("asc")
+  }
+}
+
+const sortedRows = [...rows].sort((a, b) => {
+  if (!sortField) return 0
+  const aVal = a[sortField]?.toLowerCase() ?? ""
+  const bVal = b[sortField]?.toLowerCase() ?? ""
+  if (aVal < bVal) return sortDirection === "asc" ? -1 : 1
+  if (aVal > bVal) return sortDirection === "asc" ? 1 : -1
+  return 0
+})
 
   const toggleSelectAll = () => {
     if (selectedIds.size === rows.length) {
@@ -256,7 +284,9 @@ export function QRScansPanel() {
           </Button>
         </div>
       )}
-
+      {viewMode === "map" ? (
+        <NepalMap schools={[]} onSchoolSelect={() => {}} />
+      ) : (
       <Card>
         <CardHeader>
           <CardTitle>QR Scans</CardTitle>
@@ -277,9 +307,41 @@ export function QRScansPanel() {
                       />
                     </th>
                   )}
-                  <th className="px-3 py-2 text-left">Serial</th>
-                  <th className="px-3 py-2 text-left">Technician</th>
-                  <th className="px-3 py-2 text-left">School</th>
+                  <th
+  className="px-3 py-2 text-left cursor-pointer select-none"
+  onClick={() => handleSort("serial")}
+>
+  <span className="inline-flex items-center gap-1.5 font-semibold text-gray-900">
+    Serial
+    {sortField === "serial" ? (
+      sortDirection === "asc" ? (
+        <ChevronUp className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      ) : (
+        <ChevronDown className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      )
+    ) : (
+      <ChevronUp className="h-4 w-4 text-gray-300" strokeWidth={3} />
+    )}
+  </span>
+</th>
+<th className="px-3 py-2 text-left">Technician</th>
+<th
+  className="px-3 py-2 text-left cursor-pointer select-none"
+  onClick={() => handleSort("school")}
+>
+  <span className="inline-flex items-center gap-1.5 font-semibold text-gray-900">
+    School
+    {sortField === "school" ? (
+      sortDirection === "asc" ? (
+        <ChevronUp className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      ) : (
+        <ChevronDown className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      )
+    ) : (
+      <ChevronUp className="h-4 w-4 text-gray-300" strokeWidth={3} />
+    )}
+  </span>
+</th>
                   <th className="px-3 py-2 text-left">Software Version</th>
                   <th className="px-3 py-2 text-left">Condition</th>
                   <th className="px-3 py-2 text-left">Latitude</th>
@@ -296,11 +358,15 @@ export function QRScansPanel() {
                       {loading ? "Loading scans..." : "No scans found"}
                     </td>
                   </tr>
-                ) : (
-                  rows.map((r) => (
-                    <tr key={r.id} className="border-t hover:bg-gray-50">
+                ) : (//new change
+                  sortedRows.map((r) => (
+                    <tr
+                      key={r.id}
+                      className="border-t hover:bg-gray-50 cursor-pointer"
+                      onClick={() => onScanSelect?.(r)}
+                    >
                       {isAdmin && (
-                        <td className="px-3 py-2">
+                        <td className="px-3 py-2" onClick={(e) => e.stopPropagation()}>
                           <Checkbox
                             checked={selectedIds.has(r.id)}
                             onCheckedChange={() => toggleSelect(r.id)}
@@ -309,6 +375,7 @@ export function QRScansPanel() {
                           />
                         </td>
                       )}
+                      
                       <td className="px-3 py-2 font-mono">{r.serial}</td>
                       <td className="px-3 py-2">{r.technician}</td>
                       <td className="px-3 py-2">{r.school}</td>
@@ -333,6 +400,7 @@ export function QRScansPanel() {
           </div>
         </CardContent>
       </Card>
+    )}
 
       {/* Delete Confirmation Dialog */}
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>

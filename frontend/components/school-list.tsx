@@ -309,11 +309,17 @@ export function SchoolList({
                 </button>
               </TableHead>
               {/* Looma ID column — always sorted asc, hidden for viewer */}
-              {!isViewer && (
-                <TableHead className="font-semibold text-gray-700">
-                  Looma ID
-                </TableHead>
-              )}
+            {!isViewer && (
+  <TableHead>
+    <button
+      onClick={() => handleSort("loomaId")}
+      className="flex items-center font-semibold text-gray-700 hover:text-[#1a2c5b] transition-colors"
+    >
+      Looma ID
+      <SortIcon field="loomaId" />
+    </button>
+  </TableHead>
+)}
               <TableHead>
                 <button
                   onClick={() => handleSort("district")}

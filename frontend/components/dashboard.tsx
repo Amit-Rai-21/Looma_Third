@@ -123,6 +123,21 @@ export function Dashboard() {
   const handleSchoolUpdated = (updated: School) => {
     setSelectedSchool(updated);
     setSchools((prev) => prev.map((s) => (s.id === updated.id ? updated : s)));
+  };//new change
+  const handleScanSelect = (scan: { school: string; serial: string }) => {
+    const match = schools.find((s) => {
+      const nameMatch =
+        s.name?.trim().toLowerCase() === scan.school?.trim().toLowerCase();
+      const serialMatch =
+        s.looma?.serialNumber?.trim().toLowerCase() ===
+        scan.serial?.trim().toLowerCase();
+      return nameMatch || serialMatch;
+    });
+    if (match) {
+      setSelectedSchool(match);
+    } else {
+      console.warn("No matching school found for scan:", scan);
+    }
   };
 
   if (sidebarView === "schools" && isLoading && schools.length === 0) {
@@ -155,17 +170,20 @@ export function Dashboard() {
             <SchoolIcon className="h-4 w-4" />
             Schools
           </button>
-
-          <button
-            type="button"
-            onClick={() => setSidebarView("scans")}
-            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-              sidebarView === "scans" ? "bg-white/10" : "hover:bg-white/10"
-            }`}
-          >
-            <QrCode className="h-4 w-4" />
-            QR Scans
-          </button>
+          {/* UPDATED CODE DOWN TO HIDE SCAN LIST OPTION */}
+            {user?.role !== "viewer" && (
+  <button
+    type="button"
+    onClick={() => setSidebarView("scans")}
+    className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+      sidebarView === "scans" ? "bg-white/10" : "hover:bg-white/10"
+    }`}
+  >
+    <QrCode className="h-4 w-4" />
+    QR Scans
+  </button>
+)}
+          {/* updated from above */}
         </nav>
       </aside>
 
@@ -180,7 +198,10 @@ export function Dashboard() {
 
         <main className="mx-auto max-w-7xl px-6 py-8 space-y-6">
           {sidebarView === "scans" ? (
-            <QRScansPanel />
+            <QRScansPanel
+  viewMode={viewMode}
+  onScanSelect={user?.role !== "viewer" ? handleScanSelect : undefined}
+/> //new change
           ) : (
             <>
               <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">

@@ -15,7 +15,7 @@ db = MongoDB()
 async def connect_to_mongo():
     db.client = AsyncMongoClient(
         settings.MONGODB_URI,
-        # tlsCAFile=certifi.where()
+#        tlsCAFile=certifi.where()
     )
 
     await init_beanie(
