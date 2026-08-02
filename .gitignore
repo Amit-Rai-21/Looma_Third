@@ -5,6 +5,7 @@ pycache/
 *.so
 __pycache__/
 venv/
+.venv/
 .env/
 .env.*
 node_modules/
