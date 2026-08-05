@@ -57,7 +57,9 @@ export function QRScansPanel({ viewMode = "list", onScanSelect }: QRScansPanelPr
   const [rows, setRows] = useState<ScanRow[]>([])
   const [loading, setLoading] = useState(false)
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
-  const [sortField, setSortField] = useState<"serial" | "school" | null>(null)
+  const [sortField, setSortField] = useState<
+    "serial" | "school" | "technician" | "software_version" | "lot_number" | "timestamp" | null
+  >(null)
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc")
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
@@ -107,7 +109,9 @@ export function QRScansPanel({ viewMode = "list", onScanSelect }: QRScansPanelPr
       clearInterval(interval)
     }
   }, [])
-  const handleSort = (field: "serial" | "school") => {
+  const handleSort = (
+    field: "serial" | "school" | "technician" | "software_version" | "lot_number" | "timestamp"
+  ) => {
   if (sortField !== field) {
     setSortField(field)
     setSortDirection("asc")
@@ -324,7 +328,23 @@ const sortedRows = [...rows].sort((a, b) => {
     )}
   </span>
 </th>
-<th className="px-3 py-2 text-left">Technician</th>
+<th
+  className="px-3 py-2 text-left cursor-pointer select-none"
+  onClick={() => handleSort("technician")}
+>
+  <span className="inline-flex items-center gap-1.5 font-semibold text-gray-900">
+    Technician
+    {sortField === "technician" ? (
+      sortDirection === "asc" ? (
+        <ChevronUp className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      ) : (
+        <ChevronDown className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      )
+    ) : (
+      <ChevronUp className="h-4 w-4 text-gray-300" strokeWidth={3} />
+    )}
+  </span>
+</th>
 <th
   className="px-3 py-2 text-left cursor-pointer select-none"
   onClick={() => handleSort("school")}
@@ -342,12 +362,60 @@ const sortedRows = [...rows].sort((a, b) => {
     )}
   </span>
 </th>
-                  <th className="px-3 py-2 text-left">Software Version</th>
+<th
+  className="px-3 py-2 text-left cursor-pointer select-none"
+  onClick={() => handleSort("software_version")}
+>
+  <span className="inline-flex items-center gap-1.5 font-semibold text-gray-900">
+    Software Version
+    {sortField === "software_version" ? (
+      sortDirection === "asc" ? (
+        <ChevronUp className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      ) : (
+        <ChevronDown className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      )
+    ) : (
+      <ChevronUp className="h-4 w-4 text-gray-300" strokeWidth={3} />
+    )}
+  </span>
+</th>
                   <th className="px-3 py-2 text-left">Condition</th>
                   <th className="px-3 py-2 text-left">Latitude</th>
                   <th className="px-3 py-2 text-left">Longitude</th>
-                  <th className="px-3 py-2 text-left">Lot #</th>
-                  <th className="px-3 py-2 text-left">Timestamp</th>
+                  <th
+  className="px-3 py-2 text-left cursor-pointer select-none"
+  onClick={() => handleSort("lot_number")}
+>
+  <span className="inline-flex items-center gap-1.5 font-semibold text-gray-900">
+    Lot #
+    {sortField === "lot_number" ? (
+      sortDirection === "asc" ? (
+        <ChevronUp className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      ) : (
+        <ChevronDown className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      )
+    ) : (
+      <ChevronUp className="h-4 w-4 text-gray-300" strokeWidth={3} />
+    )}
+  </span>
+</th>
+<th
+  className="px-3 py-2 text-left cursor-pointer select-none"
+  onClick={() => handleSort("timestamp")}
+>
+  <span className="inline-flex items-center gap-1.5 font-semibold text-gray-900">
+    Timestamp
+    {sortField === "timestamp" ? (
+      sortDirection === "asc" ? (
+        <ChevronUp className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      ) : (
+        <ChevronDown className="h-4 w-4 text-[#f5c842]" strokeWidth={3} />
+      )
+    ) : (
+      <ChevronUp className="h-4 w-4 text-gray-300" strokeWidth={3} />
+    )}
+  </span>
+</th>
                 </tr>
               </thead>
 
