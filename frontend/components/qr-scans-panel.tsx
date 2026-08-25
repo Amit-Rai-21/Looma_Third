@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { scansAPI } from "@/lib/api-client"
 import { useAuth } from "@/lib/auth-context"
+import type { School } from "@/lib/types"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -48,8 +49,17 @@ function formatCoordinate(v: any): string {
 interface QRScansPanelProps {
   viewMode?: "list" | "map"
   onScanSelect?: (scan: ScanRow) => void
+  // Real school data + selection handler, passed down from Dashboard so the
+  // Map view here can plot actual schools instead of an empty placeholder.
+  schools?: School[]
+  onSchoolSelect?: (school: School) => void
 }
-export function QRScansPanel({ viewMode = "list", onScanSelect }: QRScansPanelProps) {
+export function QRScansPanel({
+  viewMode = "list",
+  onScanSelect,
+  schools: schoolsForMap = [],
+  onSchoolSelect,
+}: QRScansPanelProps) {
   const { user } = useAuth()
   const { toast } = useToast()
   const isAdmin = user?.role === "admin"
@@ -289,7 +299,12 @@ const sortedRows = [...rows].sort((a, b) => {
         </div>
       )}
       {viewMode === "map" ? (
-        <NepalMap schools={[]} onSchoolSelect={() => {}} />
+        <NepalMap
+          schools={schoolsForMap}
+          onSchoolSelect={(school) => {
+            if (school) onSchoolSelect?.(school)
+          }}
+        />
       ) : (
       <Card>
         <CardHeader>
