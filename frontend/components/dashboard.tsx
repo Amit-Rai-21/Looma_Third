@@ -60,6 +60,10 @@ export function Dashboard() {
     }
   };
 
+  // NOTE: this runs regardless of `sidebarView`, so `schools` stays fresh and
+  // filtered by the header search box + province filter even while viewing
+  // the QR Scans section — that's what lets the QR Scans map reuse the same
+  // filtered data instead of needing its own copy.
   useEffect(() => {
     fetchSchools();
   }, [debouncedSearch, provinceFilter]);
@@ -197,11 +201,43 @@ export function Dashboard() {
         />
 
         <main className="mx-auto max-w-7xl px-6 py-8 space-y-6">
+          {/*
+            Province filter now lives here, outside the sidebarView branches,
+            so it's visible on the Map view regardless of whether you're in
+            the Schools section or the QR Scans section. It drives the same
+            `schools` state (via fetchSchools) that both NepalMap instances
+            below consume — no separate/duplicate filter UI needed.
+          */}
+          {viewMode === "map" && (
+            <div className="flex flex-wrap items-center gap-3 bg-white rounded-2xl p-4 border border-gray-200 shadow-sm">
+              <div className="flex items-center gap-2 text-gray-600">
+                <Filter className="h-4 w-4" />
+                <span className="text-sm font-medium">Filter:</span>
+              </div>
+              <Select value={provinceFilter} onValueChange={setProvinceFilter}>
+                <SelectTrigger className="w-44 h-10 border-gray-300 bg-white hover:bg-gray-50 transition-colors">
+                  <SelectValue placeholder="All Provinces" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Provinces</SelectItem>
+                  {provinces.map((province) => (
+                    <SelectItem key={province} value={province}>
+                      {province}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              
+            </div>
+          )}
+
           {sidebarView === "scans" ? (
             <QRScansPanel
-  viewMode={viewMode}
-  onScanSelect={user?.role !== "viewer" ? handleScanSelect : undefined}
-/> //new change
+              viewMode={viewMode}
+              onScanSelect={user?.role !== "viewer" ? handleScanSelect : undefined}
+              schools={schools}
+              onSchoolSelect={setSelectedSchool}
+            /> //new change
           ) : (
             <>
               <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
@@ -223,28 +259,35 @@ export function Dashboard() {
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Filter className="h-4 w-4" />
-                      <span className="text-sm font-medium">Filter:</span>
+                  {/*
+                    The province Select here is only shown in List view now —
+                    Map view uses the filter bar rendered above (shared across
+                    both sidebar sections), so we don't duplicate it.
+                  */}
+                  {viewMode === "list" && (
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Filter className="h-4 w-4" />
+                        <span className="text-sm font-medium">Filter:</span>
+                      </div>
+                      <Select
+                        value={provinceFilter}
+                        onValueChange={setProvinceFilter}
+                      >
+                        <SelectTrigger className="w-44 h-10 border-gray-300 bg-white hover:bg-gray-50 transition-colors">
+                          <SelectValue placeholder="All Provinces" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="all">All Provinces</SelectItem>
+                          {provinces.map((province) => (
+                            <SelectItem key={province} value={province}>
+                              {province}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
-                    <Select
-                      value={provinceFilter}
-                      onValueChange={setProvinceFilter}
-                    >
-                      <SelectTrigger className="w-44 h-10 border-gray-300 bg-white hover:bg-gray-50 transition-colors">
-                        <SelectValue placeholder="All Provinces" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">All Provinces</SelectItem>
-                        {provinces.map((province) => (
-                          <SelectItem key={province} value={province}>
-                            {province}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
+                  )}
 
                   {isAdmin && (
                     <div className="flex items-center gap-2 pl-3 border-l border-gray-300">
