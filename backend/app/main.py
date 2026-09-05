@@ -17,21 +17,21 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 #this also added for local setup
-origins = [
-    "http://localhost:3000",
-    "http://localhost:5000",
-    "http://127.0.0.1:5000",
-]
+# origins = [
+#     "http://localhost:3000",
+#     "http://localhost:5000",
+#     "http://127.0.0.1:5000",
+# ]
 #added for local environment
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:5000"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
-'''origins = [
+origins = [
     "http://localhost:41001",
     "http://127.0.0.1:41001",
     "http://localhost:41002",
@@ -39,7 +39,8 @@ app.add_middleware(
     "http://44.254.224.102",
     "http://schools.looma.website"
     "https://schools.looma.website"
-]'''
+    "https://qr.looma.education"
+]
 
 replit_dev_domain = os.environ.get("REPLIT_DEV_DOMAIN", "")
 if replit_dev_domain:
