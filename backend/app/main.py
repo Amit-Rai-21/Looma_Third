@@ -37,9 +37,9 @@ origins = [
     "http://localhost:41002",
     "http://127.0.0.1:41002",
     "http://44.254.224.102",
-    "http://schools.looma.website"
-    "https://schools.looma.website"
-    "https://qr.looma.education"
+    "http://schools.looma.website",
+    "https://schools.looma.website",
+    "https://qr.looma.education",
 ]
 
 replit_dev_domain = os.environ.get("REPLIT_DEV_DOMAIN", "")
