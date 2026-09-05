@@ -128,19 +128,16 @@ export function Dashboard() {
     setSelectedSchool(updated);
     setSchools((prev) => prev.map((s) => (s.id === updated.id ? updated : s)));
   };//new change
-  const handleScanSelect = (scan: { school: string; serial: string }) => {
-    const match = schools.find((s) => {
-      const nameMatch =
-        s.name?.trim().toLowerCase() === scan.school?.trim().toLowerCase();
-      const serialMatch =
+    const handleScanSelect = (scan: { school: string; serial: string }) => {
+    const match = schools.find(
+      (s) =>
         s.looma?.serialNumber?.trim().toLowerCase() ===
-        scan.serial?.trim().toLowerCase();
-      return nameMatch || serialMatch;
-    });
+        scan.serial?.trim().toLowerCase()
+    );
     if (match) {
       setSelectedSchool(match);
     } else {
-      console.warn("No matching school found for scan:", scan);
+      console.warn("No matching school found for scan (serial):", scan.serial);
     }
   };
 
