@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import type { School } from "@/lib/types";
 import { useAuth } from "@/lib/auth-context";
 import { schoolsAPI } from "@/lib/api-client";
+import { scansAPI } from "@/lib/api-client";
+import type { ScanRecord } from "@/lib/types";
 import {
   Dialog,
   DialogContent,
@@ -30,6 +32,7 @@ import {
   Check,
   Camera,
   ExternalLink,
+  QrCode
 } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -199,6 +202,8 @@ export function SchoolDetailModal({
   const imageInputRef = useRef<HTMLInputElement>(null);
 
   const schoolImage: string | null = (school as any)?.image ?? null;
+  const [latestScan, setLatestScan] = useState<ScanRecord | null>(null);
+  const [scanLoading, setScanLoading] = useState(false);
 
   useEffect(() => {
     setImageError(false);
@@ -212,6 +217,32 @@ export function SchoolDetailModal({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [school?.id, schoolImage, isOpen]);
+
+  useEffect(() => {
+  const fetchLatestScan = async () => {
+    if (!school?.looma?.serialNumber) {
+      setLatestScan(null);
+      return;
+    }
+    setScanLoading(true);
+    try {
+      const res = await scansAPI.list({
+        serial: school.looma.serialNumber,
+        limit: 1,
+      });
+      setLatestScan(res.scans?.[0] ?? null);
+    } catch (err) {
+      console.error("Failed to fetch latest scan:", err);
+      setLatestScan(null);
+    } finally {
+      setScanLoading(false);
+    }
+  };
+
+  if (isOpen && school) {
+    fetchLatestScan();
+  }
+}, [school?.id, school?.looma?.serialNumber, isOpen]);
 
   // ── Handlers ──
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -720,6 +751,55 @@ export function SchoolDetailModal({
                           onChange={handleFormChange}
                           mono
                         />
+                      </CardContent>
+                    </Card>
+
+                  )}
+                                    {!isViewer && (
+                    <Card>
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-sm flex items-center gap-2">
+                          <QrCode className="h-4 w-4" />
+                          Latest Scan
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-2 text-sm">
+                        {scanLoading ? (
+                          <div className="flex items-center justify-center py-4">
+                            <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                          </div>
+                        ) : latestScan ? (
+                          <>
+                            <div className="flex justify-between gap-4 items-start">
+                              <span className="text-muted-foreground shrink-0">Scan Date</span>
+                              <span className="text-right break-words flex-1">
+                                {new Date(latestScan.timestamp).toLocaleString()}
+                              </span>
+                            </div>
+                            <div className="flex justify-between gap-4 items-start">
+                              <span className="text-muted-foreground shrink-0">Coordinates</span>
+                              <code className="font-mono text-xs text-right">
+                                [{latestScan.latitude || "N/A"}, {latestScan.longitude || "N/A"}]
+                              </code>
+                            </div>
+                            <div className="flex justify-between gap-4 items-start">
+                              <span className="text-muted-foreground shrink-0">Version</span>
+                              <span className="text-right break-words flex-1 font-mono">
+                                {latestScan.software_version || "N/A"}
+                              </span>
+                            </div>
+                            <div className="flex justify-between gap-4 items-start">
+                              <span className="text-muted-foreground shrink-0">Serial Number</span>
+                              <span className="text-right break-words flex-1 font-mono">
+                                {latestScan.serial || "N/A"}
+                              </span>
+                            </div>
+                          </>
+                        ) : (
+                          <p className="text-muted-foreground text-center py-2">
+                            No scan records found.
+                          </p>
+                        )}
                       </CardContent>
                     </Card>
                   )}
