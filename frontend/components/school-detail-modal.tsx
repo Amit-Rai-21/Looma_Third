@@ -779,7 +779,7 @@ export function SchoolDetailModal({
                             <div className="flex justify-between gap-4 items-start">
                               <span className="text-muted-foreground shrink-0">Coordinates</span>
                               <code className="font-mono text-xs text-right">
-                                [{latestScan.latitude || "N/A"}, {latestScan.longitude || "N/A"}]
+                                 [{latestScan.latitude ? parseFloat(latestScan.latitude).toFixed(2) : "N/A"}, {latestScan.longitude ? parseFloat(latestScan.longitude).toFixed(2) : "N/A"}]
                               </code>
                             </div>
                             <div className="flex justify-between gap-4 items-start">
